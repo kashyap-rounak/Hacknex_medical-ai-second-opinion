@@ -44,3 +44,26 @@ To generate local synthetic demonstrator data without downloading external gigab
 python scripts/prepare_data.py
 ```
 This populates `data/sample/` with anatomically valid test radiographs and manifest files.
+
+## 🛠️ Technology Stack
+
+Our system uses a combination of AI/ML models, medical-imaging libraries, backend technologies, visualization tools, and safety components.
+
+| Category | Tool / Technology | Purpose |
+|---|---|---|
+| 🖥️ Frontend | Streamlit | Doctor-facing web dashboard and user interface |
+| ⚙️ Backend | FastAPI | API layer connecting the frontend with the AI pipeline |
+| 🧠 LLM | Google Gemini API | Generates clinical explanations and summarizes AI findings |
+| 👁️ Vision-Language Model | CLIP | Measures image-text similarity and provides visual-text evidence |
+| 🎯 Visual Grounding | OWL-ViT | Locates suspected findings in images using text prompts and bounding boxes |
+| 🩻 Medical Imaging | pydicom | Reads and processes DICOM medical-image files |
+| 🧬 Medical AI | MONAI | Medical image preprocessing and AI/3D medical imaging support |
+| 🛡️ Safety | Hallucination Gate | Filters unsupported or evidence-inconsistent AI findings |
+| 📊 Confidence | Custom Python Module | Calculates/combines evidence to produce a confidence score |
+| 🖼️ Image Processing | OpenCV | Image processing, resizing, cropping and bounding-box visualization |
+| 📈 Visualization | Matplotlib | Image and result visualization |
+| 📊 Interactive Visualization | Plotly | Interactive charts and visualizations |
+| 🔢 Numerical Processing | NumPy | Numerical computation and image-array processing |
+| 🗃️ Data Processing | Pandas | Processing structured clinical/result data |
+| 🧪 Testing | Pytest | Automated testing of the AI pipeline and safety mechanisms |
+| 🐍 Programming Language | Python | Core programming language for the AI pipeline and backend |
