@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  medsight-app:
+    build: .
+    container_name: medsight-ai
+    ports:
+      - "8501:8501"
+      - "8000:8000"
+    environment:
+      - MODE=demo
+      - MODEL_DEVICE=cpu
+      - VISUAL_THRESHOLD=0.65
+      - TEXT_THRESHOLD=0.70
+      - CONFIDENCE_HIGH=0.80
+      - CONFIDENCE_MODERATE=0.60
+      - ENABLE_HALLUCINATION_GATE=true
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

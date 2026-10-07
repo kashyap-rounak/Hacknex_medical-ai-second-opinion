@@ -1,0 +1,16 @@
+[
+  {
+    "case_id": "CASE_SAMPLE_01",
+    "image_file": "sample_cardiomegaly.png",
+    "findings": [
+      "Possible cardiomegaly"
+    ],
+    "ground_truth_bbox": [
+      163,
+      235,
+      378,
+      430
+    ],
+    "clinical_notes": "Patient with hypertension and ankle edema. Evaluate cardiac size."
+  }
+]
